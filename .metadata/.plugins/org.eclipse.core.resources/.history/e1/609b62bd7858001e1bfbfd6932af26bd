@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="salesorder" class="com.beanautowiring.beans.Salesorder"
+		autowire="constructor" />
+
+	<bean id="distributor1"
+		class="com.beanautowiring.beans.Distributor">
+		<constructor-arg value="ud039334" />
+		<property name="distributorName"
+			value="venkateswara distributors" />
+	</bean>
+
+	<bean id="transportType"
+		class="com.beanautowiring.beans.TransportType">
+		<property name="transportMode" value="roadways" />
+		<property name="vehicleType" value="mini van" />
+	</bean>
+
+	<!-- <bean id="distributor2" class="com.beanautowiring.beans.Distributor" 
+		autowire-candidate="false"> <constructor-arg value="ud049484" /> <property 
+		name="distributorName" value="raghavendra distributors" /> </bean> -->
+</beans>

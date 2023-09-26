@@ -1,0 +1,10 @@
+package com.orm.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
+
+@Configuration
+@ImportResource("classpath*:com/orm/common/application-context.xml")
+public class RootConfig {
+
+}
